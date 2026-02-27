@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cerita & Artikel - Difacko Stories</title>
+  <meta name="description" content="Kumpulan cerita pendek dan artikel pribadi dari Semarang."/>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --accent: #0066cc;
+      --card: #f8f9fa;
+      --border: #ddd;
+    }
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #e0e0e0;
+      --accent: #4da6ff;
+      --card: #1e1e1e;
+      --border: #333;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 0.6rem 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      z-index: 100;
+    }
+    article {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      transition: transform 0.2s;
+    }
+    article:hover {
+      transform: translateY(-4px);
+    }
+    .post-title {
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+    .post-meta {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-bottom: 1rem;
+    }
+    .post-content {
+      margin-top: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      .container { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+
+  <div class="container">
+    <header>
+      <h1>Cerita & Artikel Pribadi</h1>
+      <p class="subtitle">Kumpulan cerita pendek, renungan, dan random thoughts dari Semarang</p>
+    </header>
+
+    <article>
+      <h2 class="post-title">Judul Cerita Pertama: Malam di Lawang Sewu</h2>
+      <div class="post-meta">27 Februari 2026 • 4 menit baca</div>
+      <div class="post-content">
+        <p>Malam itu hujan deras mengguyur Semarang. Aku memutuskan jalan-jalan sendirian ke Lawang Sewu yang katanya angker. Lampu-lampu redup, suara angin berhembus di koridor panjang...</p>
+        <p>[Lanjutkan ceritamu di sini... tambah paragraf sebanyak yang kamu mau]</p>
+        <p>Akhirnya aku pulang dengan perasaan campur aduk. Mungkin hantu itu cuma imajinasi, atau mungkin memang ada sesuatu yang mengawasi dari balik dinding tua itu.</p>
+      </div>
+    </article>
+
+    <article>
+      <h2 class="post-title">Artikel: Kenapa Kopi Semarang Beda Rasanya</h2>
+      <div class="post-meta">26 Februari 2026 • 3 menit baca</div>
+      <div class="post-content">
+        <p>Kopi di Semarang punya karakter tersendiri. Bukan cuma robusta atau arabika, tapi campuran air tanah payau dan suhu lembab yang bikin roasting-nya unik...</p>
+        <p>[Isi artikelmu di sini, bisa tambah list, quote, dll]</p>
+        <ul>
+          <li>Roasting lokal lebih gelap</li>
+          <li>Air laut mempengaruhi rasa</li>
+          <li>Minum sambil liat sunset di Marina</li>
+        </ul>
+      </div>
+    </article>
+
+    <article>
+      <h2 class="post-title">Cerita Pendek: Pesan di Botol dari Laut Jawa</h2>
+      <div class="post-meta">25 Februari 2026 • 5 menit baca</div>
+      <div class="post-content">
+        <p>Aku menemukan botol kaca tua terdampar di Pantai Marina. Di dalamnya ada secarik kertas kuning berisi tulisan tangan: "Jika kau baca ini, berarti aku sudah..."</p>
+        <p>[Ceritakan endingnya sendiri bro]</p>
+      </div>
+    </article>
+
+    <!-- Tambah artikel/cerita baru di sini dengan format yang sama -->
+
+  </div>
+
+  <footer>
+    © 2026 Difacko • Dibuat dengan HTML & CSS murni • <a href="https://x.com/difacko" style="color: var(--accent);">@difacko</a>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const toggleBtn = document.querySelector('.theme-toggle');
+      
+      if (current === 'dark') {
+        html.setAttribute('data-theme', 'light');
+        toggleBtn.textContent = 'Dark Mode';
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        toggleBtn.textContent = 'Light Mode';
+      }
+    }
+    
+    // Cek preferensi user
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.querySelector('.theme-toggle').textContent = 'Light Mode';
+    }
+  </script>
+
+</body>
+</html>
